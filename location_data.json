@@ -1,0 +1,212 @@
+{
+    "Town Square": {
+        "name": "Town Square",
+        "description": "The heart of Whisperwind, bustling with activity. You see the Gilded Tankard to the west and the marketplace to the east.",
+        "exits": {"west": "Gilded Tankard", "east": "Marketplace"},
+        "objects": {
+            "Bulletin Board": {
+                "name": "Bulletin Board",
+                "description": "A weathered wooden board covered in notices, job postings, and local news.",
+                "type": "container",
+                "hidden_stats": {},
+                "can_pickup": False
+            },
+            "Well": {
+                "name": "Well",
+                "description": "A stone well with a worn bucket and rope. The water inside looks clear and refreshing.",
+                "type": "container",
+                "hidden_stats": {},
+                "can_pickup": False
+            }
+        },
+        "npcs": [],
+        "ascii_art": """
+ ___________________
+|                   |
+|     Town Square   |
+|        *          |
+|    / | \\          |
+|   /  |  \\         |
+|  /   |   \\        |
+| /    |    \\       |
+|/_____|_____\      |
+|  Inn  | Shop |     |
+|_______|______|     |
+|                   |
+|___________________|
+""",
+        "hidden_areas": {},
+        "requirements": [],
+        "special_events": []
+    },
+    "Gilded Tankard": {
+        "name": "Gilded Tankard",
+        "description": "The heart of Whisperwind's social life, where tales are spun, and weary travelers find rest. The walls are adorned with memorabilia from Mira Stoutheart's adventuring days, including maps, weapons, and a dragon's scale.",
+        "exits": {"east": "Town Square"},
+        "objects": {
+            "Fireplace": {
+                "name": "Fireplace",
+                "description": "A large, roaring fireplace that provides warmth and comfort to the tavern's patrons.",
+                "type": "container",
+                "hidden_stats": {},
+                "can_pickup": False
+            },
+            "Adventurer's Table": {
+                "name": "Adventurer's Table",
+                "description": "A large, round table where adventurers gather to plan their next quests, share maps, and recruit new members.",
+                "type": "container",
+                "hidden_stats": {},
+                "can_pickup": False
+            }
+        },
+        "npcs": ["Mira Stoutheart", "Bryn Lightfoot", "Jorah", "Elyssa"],
+        "ascii_art": """
+ ___________________
+|                   |
+|   Gilded Tankard  |
+|        |          |
+|      \u2615/         |
+|       |          |
+|     -----         |
+|    / | | \\        |
+|   /  | |  \\       |
+|  /   | |   \\      |
+| /    | |    \\     |
+|/_____|_|_____\    |
+|                   |
+|___________________|
+""",
+        "hidden_areas": {
+            "Back Room": (["Persuasion: 15", "Intimidation: 15"], "A dimly lit room with a sturdy table and a few chairs. It seems to be used for private meetings.")
+        },
+        "requirements": [],
+        "special_events": []
+    },
+    "Marketplace": {
+        "name": "Marketplace",
+        "description": "A bustling hub of commerce, filled with stalls selling various goods and services. The air is filled with the sounds of haggling and the smells of fresh produce and baked goods.",
+        "exits": {"west": "Town Square", "north": "Rootwhistle Apothecary", "south": "Ironhand Smithy"},
+        "objects": {
+            "Fruit Stall": {
+                "name": "Fruit Stall",
+                "description": "A colorful stall overflowing with fresh fruits from the surrounding farms.",
+                "type": "container",
+                "hidden_stats": {},
+                "can_pickup": False
+            },
+            "Blacksmith's Stall": {
+                "name": "Blacksmith's Stall",
+                "description": "A small stall displaying a selection of tools and simple weapons crafted by the local blacksmith.",
+                "type": "container",
+                "hidden_stats": {},
+                "can_pickup": False
+            }
+        },
+        "npcs": [],
+        "ascii_art": """
+ ___________________
+|                   |
+|    Marketplace    |
+|        O          |
+|       /|\\         |
+|      / | \\        |
+|     /  |  \\       |
+|                   |
+|___________________|
+""",
+        "hidden_areas": {},
+        "requirements": [],
+        "special_events": []
+    },
+    "Rootwhistle Apothecary": {
+        "name": "Rootwhistle Apothecary",
+        "description": "A cozy shop filled with the scent of herbs and flowers. Shelves line the walls, laden with jars and bottles of assorted sizes.",
+        "exits": {"south": "Marketplace"},
+        "objects": {
+            "Herb Cabinet": {
+                "name": "Herb Cabinet",
+                "description": "A large wooden cabinet with numerous drawers, each labeled with the name of a different herb.",
+                "type": "container",
+                "hidden_stats": {},
+                "can_pickup": False
+            },
+            "Potion Display": {
+                "name": "Potion Display",
+                "description": "A glass case showcasing a variety of colorful potions and remedies.",
+                "type": "container",
+                "hidden_stats": {},
+                "can_pickup": False
+            }
+        },
+        "npcs": ["Lily Rootwhistle", "Thom Underhill"],
+        "ascii_art": """
+ ___________________
+|                   |
+| Rootwhistle       |
+|  Apothecary      |
+|        \u2697         |
+|       /|\\         |
+|      / | \\        |
+|     /  |  \\       |
+|                   |
+|___________________|
+""",
+        "hidden_areas": {
+            "Back Room": (["Investigation: 12"], "A cluttered room filled with alchemical equipment and rare ingredients.")
+        },
+        "requirements": [],
+        "special_events": []
+    },
+    "Ironhand Smithy": {
+        "name": "Ironhand Smithy",
+        "description": "A sturdy stone building with a large, open forge. The rhythmic clang of hammer on anvil rings out from within.",
+        "exits": {"north": "Marketplace"},
+        "objects": {
+            "Anvil": {
+                "name": "Anvil",
+                "description": "A massive iron anvil, worn smooth from countless hammer blows.",
+                "type": "container",
+                "hidden_stats": {},
+                "can_pickup": False
+            },
+            "Forge": {
+                "name": "Forge",
+                "description": "A roaring fire blazes within the forge, heating metal to a glowing red.",
+                "type": "container",
+                "hidden_stats": {},
+                "can_pickup": False
+            }
+        },
+        "npcs": ["Durnan Ironhand", "Kara Strongarm"],
+        "ascii_art": """
+ ___________________
+|                   |
+|  Ironhand Smithy  |
+|        o          |
+|       /|\\         |
+|      / | \\        |
+|     /  |  \\       |
+|                   |
+|___________________|
+""",
+        "hidden_areas": {
+            "Storage Room": (["Dexterity: 10"], "A locked room containing valuable metals and finished weapons.")
+        },
+        "requirements": [],
+        "special_events": []
+    },
+    "Feywood Forest Edge": {
+        "name": "Feywood Forest Edge",
+        "description": "The air hums with an otherworldly energy as you stand at the border of the Feywood Forest. The trees here are ancient and gnarled, their branches twisting into strange shapes. Sunlight filters through the dense canopy, casting an ethereal glow on the forest floor.",
+        "exits": {"south": "Town Square"},
+        "objects": {
+            "Moss-Covered Boulder": {
+                "name": "Moss-Covered Boulder",
+                "description": "A large boulder covered in thick, green moss. It looks like it's been here for centuries.",
+                "type": "container",
+                "hidden_stats": {},
+                "can_pickup": False
+            },
+            "Glowing Mushrooms": {
+                "name": "Glowing Mushrooms",
+                "description": "A cluster of bioluminescent mushrooms emitting a soft, eerie light.",
